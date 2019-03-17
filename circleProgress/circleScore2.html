@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+    
+</head>
+
+<style>
+    canvas{
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+<body>
+    <div id="indicatorContainer">
+    <script src="js/radialindicator.js"></script>
+    <script>
+        $(function () {
+            var radialObj4 = $('#indicatorContainer').radialIndicator({
+                barColor: {
+                    0: '#FF0000',
+                    33: '#FFFF00',
+                    66: '#0066FF',
+                    100: '#33CC33'
+                },
+                percentage: true,
+                radius : 10
+            }).data('radialIndicator');
+
+            //Using Instance
+            radialObj4.animate(70);
+        })
+        </script>   
+    </div>
+</body>
+</html>
